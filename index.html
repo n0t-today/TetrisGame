@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div class="info">
+            <div id="score">Score: 0</div>
+            <div id="message"></div>
+        </div>
+    </div>
+    <div id="pause-overlay">
+        <div id="pause-text">Paused</div>
+    </div>
+    <div id="gameover-overlay" style="display: none;">
+        <span>GAME OVER</span>
+        <span id="final-score"></span>
+    </div>
+    <div id="difficulty-selection">
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>
+    <script src="tetrominoes.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
